@@ -11,8 +11,8 @@ Preferencias: Ropa, juguetes y comida
 Desde el administrador debe ser posible gestionar la siguiente información:
 1.	Desde el CMS se debe poder crear nuevas preferencias
 	- Se esta usando Wordpress el cual permite anadir preferencia segun sea necesario o el gusto.
-	User: AdminWm
-	Pass:123456789
+	>User: AdminWm
+	>Pass:123456789
 	
 	- Para cargar el servicio se debe instalar Xampp o el de su preferencia servico local de hosting
 	- Y poner el proyecto dentro de la carpeta htdocs
@@ -40,126 +40,126 @@ Desde el administrador debe ser posible gestionar la siguiente información:
 5.	Cada producto de la campaña debe contener la siguiente información: Nombre producto, Precio con descuento (Antes y ahora) y la preferencia a la que pertenece
 	- para esto se aplico descuento a todos los productos pero por la fecha que solicita en la prueba ya no es posible verlo,
 	para esto cree un producto adicional con esta caracteristica y podran ver su funcionamiento segun lo que solicitan
-Nota: Las preferencias de los usuarios deben recibirse vía webservice (Ej: {"email":"micorreo@correo.com","preferencia":"Ropa"}) y estos deben ser almacenados en la aplicación., y adicional, el usuario debe poder seleccionar la opción de no recibir más notificaciones.
+>Nota: Las preferencias de los usuarios deben recibirse vía webservice (Ej: {"email":"micorreo@correo.com","preferencia":"Ropa"}) y estos deben ser almacenados en la aplicación., y adicional, el usuario debe poder seleccionar la opción de no recibir más notificaciones.
 
-para esta nota cree un pequeño plugin donde realiza estas acciones:
--crea dos tablas dentro de wordpress y realiza estos procesos
--asi mismo cree 3 rutas para poder realizar el consumo del web service
-Nota: tengan claro que el tiempo que use para esto es muy corto por lo cual trate de implementar un servico web 
-lo mas simple posible, pero que cumplieroa con un minimo estandar
+	para esta nota cree un pequeño plugin donde realiza estas acciones:
+	-crea dos tablas dentro de wordpress y realiza estos procesos
+	-asi mismo cree 3 rutas para poder realizar el consumo del web service
+	Nota: tengan claro que el tiempo que use para esto es muy corto por lo cual trate de implementar un servico web 
+	lo mas simple posible, pero que cumplieroa con un minimo estandar
 
-las rutas funsiona de la siguiente manera
+	las rutas funsiona de la siguiente manera
 
--Consulta de Preferencias:
-	http://localhost/Wunderman/index.php?wpapic_api=1&mail&user=adminWm&pass=123456789
-	y tiene un valor que corre por header
-	el token que es unico no dinamico: 123456789asdasdasd$5
-	
-	Clientes:
-	
-	Codigo Curl
-	
-	curl --location --request GET "http://localhost/Wunderman/index.php?wpapic_api=1&mail&user=adminWm&pass=123456789" \
-	--header "token: 123456789asdasdasd$5"
-	
-	Codigo Php Curl
-	
-	<?php
+	-Consulta de Preferencias:
+		http://localhost/Wunderman/index.php?wpapic_api=1&mail&user=adminWm&pass=123456789
+		y tiene un valor que corre por header
+		el token que es unico no dinamico: 123456789asdasdasd$5
+		
+		Clientes:
+		
+		Codigo Curl
+		
+		curl --location --request GET "http://localhost/Wunderman/index.php?wpapic_api=1&mail&user=adminWm&pass=123456789" \
+		--header "token: 123456789asdasdasd$5"
+		
+		Codigo Php Curl
+		
+		<?php
 
-	$curl = curl_init();
+		$curl = curl_init();
 
-	curl_setopt_array($curl, array(
-	  CURLOPT_URL => 'http://localhost/Wunderman/index.php?wpapic_api=1&mail&user=adminWm&pass=123456789',
-	  CURLOPT_RETURNTRANSFER => true,
-	  CURLOPT_ENCODING => '',
-	  CURLOPT_MAXREDIRS => 10,
-	  CURLOPT_TIMEOUT => 0,
-	  CURLOPT_FOLLOWLOCATION => true,
-	  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-	  CURLOPT_CUSTOMREQUEST => 'GET',
-	  CURLOPT_HTTPHEADER => array(
-		'token: 123456789asdasdasd$5'
-	  ),
-	));
+		curl_setopt_array($curl, array(
+		  CURLOPT_URL => 'http://localhost/Wunderman/index.php?wpapic_api=1&mail&user=adminWm&pass=123456789',
+		  CURLOPT_RETURNTRANSFER => true,
+		  CURLOPT_ENCODING => '',
+		  CURLOPT_MAXREDIRS => 10,
+		  CURLOPT_TIMEOUT => 0,
+		  CURLOPT_FOLLOWLOCATION => true,
+		  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+		  CURLOPT_CUSTOMREQUEST => 'GET',
+		  CURLOPT_HTTPHEADER => array(
+			'token: 123456789asdasdasd$5'
+		  ),
+		));
 
-	$response = curl_exec($curl);
+		$response = curl_exec($curl);
 
-	curl_close($curl);
-	echo $response;
-	
--Estado
-	http://localhost/Wunderman/index.php?wpapic_api=2&mail&user=adminWm&pass=123456789
-	y tiene un valor que corre por header
-	el token que es unico no dinamico: 123456789asdasdasd$5
-	
-	Clientes:
-	
-	Codigo Curl
-	
-	curl --location --request GET "http://localhost/Wunderman/index.php?wpapic_api=2&mail&user=adminWm&pass=123456789" \
-	--header "token: 123456789asdasdasd$5"
-	
-	Codigo Php Curl
-	
-	<?php
+		curl_close($curl);
+		echo $response;
+		
+	-Estado
+		http://localhost/Wunderman/index.php?wpapic_api=2&mail&user=adminWm&pass=123456789
+		y tiene un valor que corre por header
+		el token que es unico no dinamico: 123456789asdasdasd$5
+		
+		Clientes:
+		
+		Codigo Curl
+		
+		curl --location --request GET "http://localhost/Wunderman/index.php?wpapic_api=2&mail&user=adminWm&pass=123456789" \
+		--header "token: 123456789asdasdasd$5"
+		
+		Codigo Php Curl
+		
+		<?php
 
-	$curl = curl_init();
+		$curl = curl_init();
 
-	curl_setopt_array($curl, array(
-	  CURLOPT_URL => 'http://localhost/Wunderman/index.php?wpapic_api=2&mail&user=adminWm&pass=123456789',
-	  CURLOPT_RETURNTRANSFER => true,
-	  CURLOPT_ENCODING => '',
-	  CURLOPT_MAXREDIRS => 10,
-	  CURLOPT_TIMEOUT => 0,
-	  CURLOPT_FOLLOWLOCATION => true,
-	  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-	  CURLOPT_CUSTOMREQUEST => 'GET',
-	  CURLOPT_HTTPHEADER => array(
-		'token: 123456789asdasdasd$5'
-	  ),
-	));
+		curl_setopt_array($curl, array(
+		  CURLOPT_URL => 'http://localhost/Wunderman/index.php?wpapic_api=2&mail&user=adminWm&pass=123456789',
+		  CURLOPT_RETURNTRANSFER => true,
+		  CURLOPT_ENCODING => '',
+		  CURLOPT_MAXREDIRS => 10,
+		  CURLOPT_TIMEOUT => 0,
+		  CURLOPT_FOLLOWLOCATION => true,
+		  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+		  CURLOPT_CUSTOMREQUEST => 'GET',
+		  CURLOPT_HTTPHEADER => array(
+			'token: 123456789asdasdasd$5'
+		  ),
+		));
 
-	$response = curl_exec($curl);
+		$response = curl_exec($curl);
 
-	curl_close($curl);
-	echo $response;
-	
--Cambio de estado
-	http://localhost/Wunderman/index.php?wpapic_api=3&mail&user=adminWm&pass=123456789
-	y tiene un valor que corre por header
-	el token que es unico no dinamico: 123456789asdasdasd$5
-	y una valor estado:0,1
-	
-	Clientes:
-	
-	Codigo Curl
-	
-	curl --location --request GET "http://localhost/Wunderman/index.php?wpapic_api=3&mail&user=adminWm&pass=123456789" \
-	--header "token: 123456789asdasdasd$5" \
-	--header "estado: 1"
-	
-	Codigo Php Curl
-	
-	<?php
+		curl_close($curl);
+		echo $response;
+		
+	-Cambio de estado
+		http://localhost/Wunderman/index.php?wpapic_api=3&mail&user=adminWm&pass=123456789
+		y tiene un valor que corre por header
+		el token que es unico no dinamico: 123456789asdasdasd$5
+		y una valor estado:0,1
+		
+		Clientes:
+		
+		Codigo Curl
+		
+		curl --location --request GET "http://localhost/Wunderman/index.php?wpapic_api=3&mail&user=adminWm&pass=123456789" \
+		--header "token: 123456789asdasdasd$5" \
+		--header "estado: 1"
+		
+		Codigo Php Curl
+		
+		<?php
 
-	$curl = curl_init();
+		$curl = curl_init();
 
-	curl_setopt_array($curl, array(
-	  CURLOPT_URL => 'http://localhost/Wunderman/index.php?wpapic_api=3&mail&user=adminWm&pass=123456789',
-	  CURLOPT_RETURNTRANSFER => true,
-	  CURLOPT_ENCODING => '',
-	  CURLOPT_MAXREDIRS => 10,
-	  CURLOPT_TIMEOUT => 0,
-	  CURLOPT_FOLLOWLOCATION => true,
-	  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-	  CURLOPT_CUSTOMREQUEST => 'GET',
-	  CURLOPT_HTTPHEADER => array(
-		'token: 123456789asdasdasd$5',
-		'estado: 1'
-	  ),
-	));
+		curl_setopt_array($curl, array(
+		  CURLOPT_URL => 'http://localhost/Wunderman/index.php?wpapic_api=3&mail&user=adminWm&pass=123456789',
+		  CURLOPT_RETURNTRANSFER => true,
+		  CURLOPT_ENCODING => '',
+		  CURLOPT_MAXREDIRS => 10,
+		  CURLOPT_TIMEOUT => 0,
+		  CURLOPT_FOLLOWLOCATION => true,
+		  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+		  CURLOPT_CUSTOMREQUEST => 'GET',
+		  CURLOPT_HTTPHEADER => array(
+			'token: 123456789asdasdasd$5',
+			'estado: 1'
+		  ),
+		));
 
-	$response = curl_exec($curl);
+		$response = curl_exec($curl);
 
-	curl_close($curl);
-	echo $response;
+		curl_close($curl);
+		echo $response;
