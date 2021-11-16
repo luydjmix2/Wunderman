@@ -40,7 +40,7 @@ Desde el administrador debe ser posible gestionar la siguiente información:
 5.	Cada producto de la campaña debe contener la siguiente información: Nombre producto, Precio con descuento (Antes y ahora) y la preferencia a la que pertenece
 	- para esto se aplico descuento a todos los productos pero por la fecha que solicita en la prueba ya no es posible verlo,
 	para esto cree un producto adicional con esta caracteristica y podran ver su funcionamiento segun lo que solicitan
-Nota: Las preferencias de los usuarios deben recibirse vía webservice (Ej: {"email":"micorreo@correo.com","preferencia":"Ropa"}) y estos deben ser almacenados en la aplicación., y adicional, el usuario debe poder seleccionar la opción de no recibir más notificaciones.
+>Nota: Las preferencias de los usuarios deben recibirse vía webservice (Ej: {"email":"micorreo@correo.com","preferencia":"Ropa"}) y estos deben ser almacenados en la aplicación., y adicional, el usuario debe poder seleccionar la opción de no recibir más notificaciones.
 
 	para esta nota cree un pequeño plugin donde realiza estas acciones:
 	-crea dos tablas dentro de wordpress y realiza estos procesos
