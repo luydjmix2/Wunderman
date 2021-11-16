@@ -1,0 +1,70 @@
+2021-11-16T03:34:31+00:00 CRITICAL Uncaught Error: wpapic_auth(): Argument #1 ($user_login) cannot be passed by reference in E:\xampp\htdocs\Wunderman\wp-content\plugins\api-consulting\includes\api.php:18
+Stack trace:
+#0 E:\xampp\htdocs\Wunderman\wp-content\plugins\api-consulting\includes\ac-functions.php(20): include()
+#1 E:\xampp\htdocs\Wunderman\wp-includes\class-wp-hook.php(303): wpapic_parse_request(Object(WP))
+#2 E:\xampp\htdocs\Wunderman\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#3 E:\xampp\htdocs\Wunderman\wp-includes\plugin.php(518): WP_Hook->do_action(Array)
+#4 E:\xampp\htdocs\Wunderman\wp-includes\class-wp.php(388): do_action_ref_array('parse_request', Array)
+#5 E:\xampp\htdocs\Wunderman\wp-includes\class-wp.php(750): WP->parse_request('')
+#6 E:\xampp\htdocs\Wunderman\wp-includes\functions.php(1291): WP->main('')
+#7 E:\xampp\htdocs\Wunderman\wp-blog-header.php(16): wp()
+#8 E:\xampp\htdocs\Wunderman\index.php(17): require('E:\\xampp\\htdocs...')
+#9 {main}
+  thrown en E:\xampp\htdocs\Wunderman\wp-content\plugins\api-consulting\includes\api.php en la línea 18
+
+2021-11-16T03:34:57+00:00 CRITICAL Uncaught Error: wpapic_auth(): Argument #1 ($user_login) cannot be passed by reference in E:\xampp\htdocs\Wunderman\wp-content\plugins\api-consulting\includes\api.php:18
+Stack trace:
+#0 E:\xampp\htdocs\Wunderman\wp-content\plugins\api-consulting\includes\ac-functions.php(20): include()
+#1 E:\xampp\htdocs\Wunderman\wp-includes\class-wp-hook.php(303): wpapic_parse_request(Object(WP))
+#2 E:\xampp\htdocs\Wunderman\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#3 E:\xampp\htdocs\Wunderman\wp-includes\plugin.php(518): WP_Hook->do_action(Array)
+#4 E:\xampp\htdocs\Wunderman\wp-includes\class-wp.php(388): do_action_ref_array('parse_request', Array)
+#5 E:\xampp\htdocs\Wunderman\wp-includes\class-wp.php(750): WP->parse_request('')
+#6 E:\xampp\htdocs\Wunderman\wp-includes\functions.php(1291): WP->main('')
+#7 E:\xampp\htdocs\Wunderman\wp-blog-header.php(16): wp()
+#8 E:\xampp\htdocs\Wunderman\index.php(17): require('E:\\xampp\\htdocs...')
+#9 {main}
+  thrown en E:\xampp\htdocs\Wunderman\wp-content\plugins\api-consulting\includes\api.php en la línea 18
+
+2021-11-16T03:36:36+00:00 CRITICAL Uncaught Error: Call to undefined function wpmu_validate_user_signup() in E:\xampp\htdocs\Wunderman\wp-content\plugins\api-consulting\includes\api.php:20
+Stack trace:
+#0 E:\xampp\htdocs\Wunderman\wp-content\plugins\api-consulting\includes\ac-functions.php(20): include()
+#1 E:\xampp\htdocs\Wunderman\wp-includes\class-wp-hook.php(303): wpapic_parse_request(Object(WP))
+#2 E:\xampp\htdocs\Wunderman\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#3 E:\xampp\htdocs\Wunderman\wp-includes\plugin.php(518): WP_Hook->do_action(Array)
+#4 E:\xampp\htdocs\Wunderman\wp-includes\class-wp.php(388): do_action_ref_array('parse_request', Array)
+#5 E:\xampp\htdocs\Wunderman\wp-includes\class-wp.php(750): WP->parse_request('')
+#6 E:\xampp\htdocs\Wunderman\wp-includes\functions.php(1291): WP->main('')
+#7 E:\xampp\htdocs\Wunderman\wp-blog-header.php(16): wp()
+#8 E:\xampp\htdocs\Wunderman\index.php(17): require('E:\\xampp\\htdocs...')
+#9 {main}
+  thrown en E:\xampp\htdocs\Wunderman\wp-content\plugins\api-consulting\includes\api.php en la línea 20
+
+2021-11-16T03:39:10+00:00 CRITICAL Uncaught Error: Call to undefined function wpmu_validate_user_signup() in E:\xampp\htdocs\Wunderman\wp-content\plugins\api-consulting\includes\api.php:20
+Stack trace:
+#0 E:\xampp\htdocs\Wunderman\wp-content\plugins\api-consulting\includes\ac-functions.php(20): include()
+#1 E:\xampp\htdocs\Wunderman\wp-includes\class-wp-hook.php(303): wpapic_parse_request(Object(WP))
+#2 E:\xampp\htdocs\Wunderman\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#3 E:\xampp\htdocs\Wunderman\wp-includes\plugin.php(518): WP_Hook->do_action(Array)
+#4 E:\xampp\htdocs\Wunderman\wp-includes\class-wp.php(388): do_action_ref_array('parse_request', Array)
+#5 E:\xampp\htdocs\Wunderman\wp-includes\class-wp.php(750): WP->parse_request('')
+#6 E:\xampp\htdocs\Wunderman\wp-includes\functions.php(1291): WP->main('')
+#7 E:\xampp\htdocs\Wunderman\wp-blog-header.php(16): wp()
+#8 E:\xampp\htdocs\Wunderman\index.php(17): require('E:\\xampp\\htdocs...')
+#9 {main}
+  thrown en E:\xampp\htdocs\Wunderman\wp-content\plugins\api-consulting\includes\api.php en la línea 20
+
+2021-11-16T03:52:58+00:00 CRITICAL Uncaught Error: Call to undefined function WP_Error() in E:\xampp\htdocs\Wunderman\wp-content\plugins\api-consulting\includes\api.php:35
+Stack trace:
+#0 E:\xampp\htdocs\Wunderman\wp-content\plugins\api-consulting\includes\ac-functions.php(20): include()
+#1 E:\xampp\htdocs\Wunderman\wp-includes\class-wp-hook.php(303): wpapic_parse_request(Object(WP))
+#2 E:\xampp\htdocs\Wunderman\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#3 E:\xampp\htdocs\Wunderman\wp-includes\plugin.php(518): WP_Hook->do_action(Array)
+#4 E:\xampp\htdocs\Wunderman\wp-includes\class-wp.php(388): do_action_ref_array('parse_request', Array)
+#5 E:\xampp\htdocs\Wunderman\wp-includes\class-wp.php(750): WP->parse_request('')
+#6 E:\xampp\htdocs\Wunderman\wp-includes\functions.php(1291): WP->main('')
+#7 E:\xampp\htdocs\Wunderman\wp-blog-header.php(16): wp()
+#8 E:\xampp\htdocs\Wunderman\index.php(17): require('E:\\xampp\\htdocs...')
+#9 {main}
+  thrown en E:\xampp\htdocs\Wunderman\wp-content\plugins\api-consulting\includes\api.php en la línea 35
+

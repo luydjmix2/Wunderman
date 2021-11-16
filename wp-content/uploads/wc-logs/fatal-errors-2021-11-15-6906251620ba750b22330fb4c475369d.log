@@ -1,0 +1,28 @@
+2021-11-15T21:10:55+00:00 CRITICAL Uncaught Error: Call to undefined function ac_setup_post_type() in E:\xampp\htdocs\Wunderman\wp-content\plugins\api-consulting\plugin.php:20
+Stack trace:
+#0 E:\xampp\htdocs\Wunderman\wp-includes\class-wp-hook.php(303): ac_activate(false)
+#1 E:\xampp\htdocs\Wunderman\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 E:\xampp\htdocs\Wunderman\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 E:\xampp\htdocs\Wunderman\wp-admin\includes\plugin.php(698): do_action('activate_api-co...', false)
+#4 E:\xampp\htdocs\Wunderman\wp-admin\plugins.php(58): activate_plugin('api-consulting/...', 'http://localhos...', false)
+#5 {main}
+  thrown en E:\xampp\htdocs\Wunderman\wp-content\plugins\api-consulting\plugin.php en la línea 20
+
+2021-11-15T21:10:58+00:00 CRITICAL Uncaught Error: Call to undefined function ac_setup_post_type() in E:\xampp\htdocs\Wunderman\wp-content\plugins\api-consulting\plugin.php:20
+Stack trace:
+#0 E:\xampp\htdocs\Wunderman\wp-includes\class-wp-hook.php(303): ac_activate('')
+#1 E:\xampp\htdocs\Wunderman\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 E:\xampp\htdocs\Wunderman\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 E:\xampp\htdocs\Wunderman\wp-admin\plugins.php(193): do_action('activate_api-co...')
+#4 {main}
+  thrown en E:\xampp\htdocs\Wunderman\wp-content\plugins\api-consulting\plugin.php en la línea 20
+
+2021-11-15T21:10:58+00:00 CRITICAL Uncaught Error: Call to undefined function ac_setup_post_type() in E:\xampp\htdocs\Wunderman\wp-content\plugins\api-consulting\plugin.php:20
+Stack trace:
+#0 E:\xampp\htdocs\Wunderman\wp-includes\class-wp-hook.php(303): ac_activate('')
+#1 E:\xampp\htdocs\Wunderman\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#2 E:\xampp\htdocs\Wunderman\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 E:\xampp\htdocs\Wunderman\wp-admin\plugins.php(193): do_action('activate_api-co...')
+#4 {main}
+  thrown en E:\xampp\htdocs\Wunderman\wp-content\plugins\api-consulting\plugin.php en la línea 20
+
