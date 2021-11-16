@@ -11,8 +11,8 @@ Preferencias: Ropa, juguetes y comida
 Desde el administrador debe ser posible gestionar la siguiente información:
 1.	Desde el CMS se debe poder crear nuevas preferencias
 	- Se esta usando Wordpress el cual permite anadir preferencia segun sea necesario o el gusto.
-	*User: AdminWm
-	*Pass:123456789
+	>User: AdminWm
+	>Pass:123456789
 	
 	- Para cargar el servicio se debe instalar Xampp o el de su preferencia servico local de hosting
 	- Y poner el proyecto dentro de la carpeta htdocs
